@@ -2,122 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FINIXCrew Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Unbounded&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&family=Orbitron&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #f0f0f0;
       font-family: 'Unbounded', sans-serif;
-      background: #0a0a0a;
-      color: #f5f5f5;
-      text-align: center;
-      padding: 2rem;
-      background-image: radial-gradient(circle at top, #1b1b1b, #000);
+      background: linear-gradient(to bottom, #000000, #1a1a1a);
     }
     header {
-      padding: 1.5rem 1rem;
-      background: #111;
-      border-bottom: 2px solid #ff2e63;
-      box-shadow: 0 2px 10px rgba(255, 0, 0, 0.2);
+      text-align: center;
+      padding: 40px 20px 20px;
     }
     header img {
-      height: 100px;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+      width: 200px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px crimson;
     }
     h1 {
-      font-size: 2.5rem;
-      color: #ff2e63;
-      margin-top: 2rem;
+      font-size: 2.6em;
+      margin: 20px 0 10px;
+      color: crimson;
     }
-    p {
-      font-size: 1.1rem;
-      max-width: 800px;
-      margin: 1rem auto;
-      color: #ccc;
-    }
-    .highlight {
-      color: #00e0ff;
-      font-weight: bold;
-    }
-    .youtube {
-      margin: 2rem auto;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-      align-items: center;
-    }
-    iframe {
-      width: 90%;
-      max-width: 560px;
-      aspect-ratio: 16 / 9;
-      border: 3px solid #ff2e63;
-      border-radius: 10px;
-      box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+    .desc {
+      font-size: 1.15em;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 10px;
+      line-height: 1.6em;
+      text-align: center;
     }
     .members {
-      margin: 3rem 0;
+      margin-top: 30px;
+      text-align: center;
     }
     .members h2 {
-      color: #ff2e63;
-      margin-bottom: 1rem;
+      color: #ff4444;
+      font-size: 1.5em;
     }
-    .members ul {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.7rem;
-      font-size: 1rem;
+    .members p {
+      font-size: 1.05em;
+      font-family: monospace;
     }
-    .members li {
-      background: #1a1a1a;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+    .links {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .links a {
+      color: #fff;
+      background: crimson;
+      text-decoration: none;
+      padding: 10px 22px;
+      margin: 8px;
+      border-radius: 8px;
+      display: inline-block;
+      font-weight: bold;
+      transition: background 0.3s ease;
+    }
+    .links a:hover {
+      background: #ff2222;
     }
     footer {
-      margin-top: 3rem;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    a {
-      color: #00e0ff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
+      text-align: center;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #555;
+      padding-bottom: 30px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.jpg" alt="FINIXCrew Logo">
+    <img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" alt="FINIXCrew Logo" />
+    <h1>FINIXCrew Developer</h1>
+    <p class="desc">
+      A visionary team of young creators building immersive, mysterious, and chilling experiences in the world of Roblox and more. <br>
+      Currently developing: <strong>SENTAX Crew</strong> — an upcoming horror experience.
+    </p>
   </header>
 
-  <h1>FINIXCrew Developer</h1>
-  <p>A youth-powered team developing horror experiences in Roblox.</p>
-  <p>Currently working on the upcoming horror project: <span class="highlight">SENTAX Crew</span>.</p>
-
-  <div class="youtube">
-    <iframe src="https://www.youtube.com/embed/a5tEvR7qxyI?si=__1HHXH-XIK1u1i8" title="SENTAX Crew Teaser 1" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/SnnuYg8J-Fs?si=qLkPPs6ZvyYPCA4u" title="SENTAX Crew Teaser 2" allowfullscreen></iframe>
-  </div>
-
   <div class="members">
-    <h2>Meet the Team</h2>
-    <ul>
-      <li>Izz</li><li>Cyrus</li><li>Ferlin</li><li>Safiyy</li><li>Steve</li>
-      <li>Caden</li><li>Affan</li><li>Marcus</li><li>Ean</li><li>Ethanial</li>
-      <li>Gabby</li><li>Heze</li><li>Alden</li><li>Aina</li><li>Afqah</li>
-    </ul>
-    <p>👑 Founders: <span class="highlight">Ferlin Ferdinand</span> & <span class="highlight">Cyrus Eden</span></p>
+    <h2>Team Members</h2>
+    <p>Izz, Cyrus, Ferlin, Safiyy, Steve, Caden, Affan, Marcus, Ean, Ethanial, Gabby, Heze, Alden, Aina, Afqah</p>
+    <p><strong>Founders:</strong> Ferlin Ferdinand & Cyrus Eden</p>
   </div>
 
-  <p>📺 Subscribe on YouTube: <a href="https://www.youtube.com/@FINIXCrewDeveloper" target="_blank">@FINIXCrewDeveloper</a></p>
+  <div class="links">
+    <a href="https://www.youtube.com/@FINIXCrew_Developer" target="_blank">🎥 YouTube Channel</a>
+    <a href="https://youtu.be/a5tEvR7qxyI?si=__1HHXH-XIK1u1i8" target="_blank">Dev vlog</a>
+    <a href="https://youtu.be/SnnuYg8J-Fs?si=qLkPPs6ZvyYPCA4u" target="_blank">Dev vlod</a>
+  </div>
 
   <footer>
     © 2025 FINIXCrew Developer. All rights reserved.
