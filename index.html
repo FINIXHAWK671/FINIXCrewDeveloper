@@ -2,105 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FINIXCrew Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&family=Orbitron&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FINIXCrew Developer - Overview/Main</title>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: #000;
-      color: #f0f0f0;
       font-family: 'Unbounded', sans-serif;
-      background: linear-gradient(to bottom, #000000, #1a1a1a);
+      background-color: #0f0f0f;
+      color: white;
     }
+
     header {
-      text-align: center;
-      padding: 40px 20px 20px;
+      background-color: #d60000;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    header img {
-      width: 200px;
-      border-radius: 20px;
-      box-shadow: 0 0 30px crimson;
+
+    .logo {
+      height: 50px;
     }
-    h1 {
-      font-size: 2.6em;
-      margin: 20px 0 10px;
-      color: crimson;
-    }
-    .desc {
-      font-size: 1.15em;
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 10px;
-      line-height: 1.6em;
-      text-align: center;
-    }
-    .members {
-      margin-top: 30px;
-      text-align: center;
-    }
-    .members h2 {
-      color: #ff4444;
-      font-size: 1.5em;
-    }
-    .members p {
-      font-size: 1.05em;
-      font-family: monospace;
-    }
-    .links {
-      text-align: center;
-      margin-top: 40px;
-    }
-    .links a {
-      color: #fff;
-      background: crimson;
+
+    nav a {
+      color: white;
       text-decoration: none;
-      padding: 10px 22px;
-      margin: 8px;
-      border-radius: 8px;
-      display: inline-block;
+      margin-left: 20px;
       font-weight: bold;
-      transition: background 0.3s ease;
     }
-    .links a:hover {
-      background: #ff2222;
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
     }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      color: #ff3333;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      text-align: center;
+      font-size: 1.1em;
+      color: #ccc;
+      margin-bottom: 40px;
+    }
+
+    .image-space {
+      width: 100%;
+      height: 300px;
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 1.2em;
+    }
+
+    .team-section {
+      background-color: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+
+    .team-section h2 {
+      color: #ff4d4d;
+      margin-bottom: 20px;
+    }
+
+    .team-list {
+      font-size: 1em;
+      color: #ddd;
+      line-height: 1.8em;
+      white-space: pre-wrap;
+    }
+
     footer {
       text-align: center;
+      padding: 20px;
+      color: #888;
+      background-color: #1a1a1a;
       margin-top: 60px;
-      font-size: 0.9em;
-      color: #555;
-      padding-bottom: 30px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" alt="FINIXCrew Logo" />
-    <h1>FINIXCrew Developer</h1>
-    <p class="desc">
-      A visionary team of young creators building immersive, mysterious, and chilling experiences in the world of Roblox and more. <br>
-      Currently developing: <strong>SENTAX Crew</strong> — an upcoming horror experience.
-    </p>
+    <img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" alt="FINIXCrew Logo" class="logo">
+    <nav>
+      <a href="overview.html">Overview</a>
+      <a href="news.html">News</a>
+    </nav>
   </header>
 
-  <div class="members">
-    <h2>Team Members</h2>
-    <p>Izz, Cyrus, Ferlin, Dayral, Safiyy, Steve, Caden, Affan, Marcus, Ean, Ethanial, Gabby, Heze, Alden, Aina,</p>
-    <p><strong>Founders:</strong> Ferlin Ferdinand & Cyrus Eden</p>
-    <p><strong>Roblox User to test our game = Ferlin Ferdinand: TheAustrianPainte</strong></p>
-  </div>
+  <div class="container">
+    <h1>FINIXCrew Developer</h1>
+    <p class="description">
+      FINIXCrew Developer is a youth-led game development and creative technology team, founded by Ferlin Ferdinand and Cyrus Eden. We are dedicated to building immersive, powerful, and chaotic gameplay experiences — all while learning and growing together as a crew.
+    </p>
 
-  <div class="links">
-    <a href="https://www.youtube.com/@FINIXCrew_Developer" target="_blank">🎥 YouTube Channel</a>
-    <a href="https://youtu.be/a5tEvR7qxyI?si=__1HHXH-XIK1u1i8" target="_blank">Dev vlog</a>
-    <a href="https://youtu.be/SnnuYg8J-Fs?si=qLkPPs6ZvyYPCA4u" target="_blank">Dev vlog</a>
+    <div class="image-space">
+      [ Insert project banner or team image here ]
+    </div>
+
+    <div class="team-section">
+      <h2>Founders</h2>
+      <div class="team-list">Ferlin Ferdinand, Cyrus Eden</div>
+
+      <h2>Team Members</h2>
+      <div class="team-list">
+Ferlin, Izz, Cyrus, Dayral, Safiyy, Steve, Caden, Affan, Marcus, Ean, Ethanial, Gabby, Heze, Alden, Aina, Isaac
+      </div>
+    </div>
   </div>
 
   <footer>
-    © 2025 FINIXCrew Developer. All rights reserved.
+    &copy; 2025 FINIXCrew Developer. All rights reserved.
   </footer>
 
 </body>
