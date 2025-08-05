@@ -45,6 +45,23 @@
       margin-bottom: 30px;
     }
 
+    .sort-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .sort-buttons button {
+      background-color: #ff3333;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 1em;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
     .news-item {
       background-color: #1a1a1a;
       padding: 25px;
@@ -87,26 +104,47 @@
   <div class="container">
     <h1>FINIXCrew News</h1>
 
-    <div class="news-item">
-      <h2>FINIXCrew Begins New Project</h2>
-      <p>August 5, 2025 — FINIXCrew is starting a brand-new horror game experience with dramatic effects, story-driven gameplay and more. Stay tuned as we reveal more teasers and behind-the-scenes development soon.</p>
-    </div>
-    
-    <div class="news-item">
-      <h2>FINIXCrew Website Launches</h2>
-      <p>August 2025 — The official FINIXCrew Developer website is live! Built with pride by the members, this site showcases our mission, members, and latest news. More updates coming weekly!</p>
-    </div>
-    
-    <div class="news-item">
-      <h2>FINIXCrew Developer Content Creator</h2>
-      <p>Attention all personnel, we are annoucing our contents creators channels. FINIXCrew Developer: @FINIXCrew_Developer(Youtube), @FayR_Crown(Youtube), @cyruseden53(TikTok), @xrrizz_ (TikTok), @dayrallaluz (Youtube) Remember supporting each other does not make you sad.</p>
+    <div class="sort-buttons">
+      <button onclick="sortNews('latest')">Sort by Latest</button>
+      <button onclick="sortNews('oldest')">Sort by Oldest</button>
     </div>
 
+    <div id="news-container">
+      <div class="news-item" data-date="2025-08-05">
+        <h2>FINIXCrew Begins New Project</h2>
+        <p>August 5, 2025 — FINIXCrew is starting a brand-new horror game experience with dramatic effects, story-driven gameplay and more. Stay tuned as we reveal more teasers and behind-the-scenes development soon.</p>
+      </div>
+      
+      <div class="news-item" data-date="2025-08-04">
+        <h2>FINIXCrew Website Launches</h2>
+        <p>August 2025 — The official FINIXCrew Developer website is live! Built with pride by the members, this site showcases our mission, members, and latest news. More updates coming weekly!</p>
+      </div>
+      
+      <div class="news-item" data-date="2025-08-03">
+        <h2>FINIXCrew Developer Content Creator</h2>
+        <p>Attention all personnel, we are annoucing our contents creators channels. FINIXCrew Developer: @FINIXCrew_Developer(Youtube), @elflamor(TikTok) @FayR_Crown(Youtube), @cyruseden53(TikTok), @xrrizz_ (TikTok), @dayrallaluz (Youtube).</p>
+      </div>
+    </div>
   </div>
 
   <footer>
     &copy; 2025 FINIXCrew Developer. All rights reserved.
   </footer>
+
+  <script>
+    function sortNews(order) {
+      const container = document.getElementById('news-container');
+      const items = Array.from(container.children);
+
+      items.sort((a, b) => {
+        const dateA = new Date(a.getAttribute('data-date'));
+        const dateB = new Date(b.getAttribute('data-date'));
+        return order === 'latest' ? dateB - dateA : dateA - dateB;
+      });
+
+      items.forEach(item => container.appendChild(item));
+    }
+  </script>
 
 </body>
 </html>
