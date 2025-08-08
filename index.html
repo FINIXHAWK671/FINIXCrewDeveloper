@@ -162,15 +162,26 @@
       </audio>
     </div>
 
-    <div class="music-section">
-      <h2>🔍 Search & Listen to Music</h2>
-      <p>Search for any song or artist and listen instantly.</p>
-      <input type="text" id="musicSearch" placeholder="Enter song or artist name..." style="width:80%;padding:10px;border-radius:8px;border:none;">
-      <button onclick="searchMusic()" style="padding:10px 20px;margin-left:10px;background-color:#ff3333;color:white;border:none;border-radius:8px;font-weight:bold;">Search</button>
-      <div id="musicPlayer" style="margin-top:20px;border-radius:12px;overflow:hidden;background:#000;">
-        <iframe id="musicFrame" src="" width="100%" height="450" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-      </div>
-    </div>
+   <div class="music-section">
+  <h2>🔍 Search & Listen to Music</h2>
+  <p>Search for any song or artist and listen instantly.</p>
+  <input type="text" id="musicSearch" placeholder="Enter song or artist name..." style="width:80%;padding:10px;border-radius:8px;border:none;">
+  <button onclick="searchMusic()" style="padding:10px 20px;margin-left:10px;background-color:#ff3333;color:white;border:none;border-radius:8px;font-weight:bold;">Search</button>
+  <div id="musicPlayer" style="margin-top:20px;border-radius:12px;overflow:hidden;background:#000;">
+    <iframe id="musicFrame" src="" width="100%" height="450" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+  </div>
+</div>
+
+<script>
+  function searchMusic() {
+    let query = document.getElementById('musicSearch').value.trim();
+    if (query) {
+      let searchUrl = "https://www.youtube.com/results?search_query=" + encodeURIComponent(query);
+      document.getElementById('musicFrame').src = searchUrl;
+    }
+  }
+</script>
+
 
     <script>
       function searchMusic() {
