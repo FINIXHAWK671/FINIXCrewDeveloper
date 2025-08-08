@@ -162,15 +162,34 @@
       </audio>
     </div>
 
-   <div class="music-section">
+<div class="music-section">
   <h2>🔍 Search & Listen to Music</h2>
-  <p>Search for any song or artist and listen instantly.</p>
-  <input type="text" id="musicSearch" placeholder="Enter song or artist name..." style="width:80%;padding:10px;border-radius:8px;border:none;">
-  <button onclick="searchMusic()" style="padding:10px 20px;margin-left:10px;background-color:#ff3333;color:white;border:none;border-radius:8px;font-weight:bold;">Search</button>
+  <p>Paste a YouTube link or enter the video ID to listen instantly.</p>
+  <input type="text" id="musicSearch" placeholder="Enter YouTube link or ID..." style="width:80%;padding:10px;border-radius:8px;border:none;">
+  <button onclick="playMusic()" style="padding:10px 20px;margin-left:10px;background-color:#ff3333;color:white;border:none;border-radius:8px;font-weight:bold;">Play</button>
   <div id="musicPlayer" style="margin-top:20px;border-radius:12px;overflow:hidden;background:#000;">
-    <iframe id="musicFrame" src="" width="100%" height="450" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+    <iframe id="musicFrame" src="" width="100%" height="450" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 </div>
+
+<script>
+  function playMusic() {
+    let input = document.getElementById('musicSearch').value.trim();
+    if (input) {
+      let videoId = "";
+      let match = input.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([a-zA-Z0-9_-]{11})/);
+      if (match) {
+        videoId = match[1];
+      } else {
+        videoId = input;
+      }
+
+      let embedUrl = "https://www.youtube-nocookie.com/embed/" + videoId + "?autoplay=1";
+      document.getElementById('musicFrame').src = embedUrl;
+    }
+  }
+</script>
+
 
 <script>
   function searchMusic() {
