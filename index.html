@@ -153,14 +153,34 @@
       <div class="team-list">Ferlin, Izz, Cyrus, Dayral, Safiyy, Steve, Caden, Affan, Marcus, Ean, Ethanial, Gabby, Heze, Alden, Aina, Isaac</div>
     </div>
 
-    <div class="music-section">
+        <div class="music-section">
       <h2>🎧 Featured Music</h2>
       <p>ស្រាមួយកែវ - Khmer Remix</p>
       <audio controls>
-       <source src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/%E1%9E%9F%E1%9F%92%E1%9E%9A%E1%9E%B6%E1%9E%98%E1%9E%BD%E1%9E%99%E1%9E%80%E1%9F%82%E1%9E%9C%20_%20new%20melody%202019%20_%20khmer%20remix%202017%20%5B6BDP7QORDYY%5D.mp3" type="audio/mpeg">
+        <source src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/%E1%9E%9F%E1%9F%92%E1%9E%9A%E1%9E%B6%E1%9E%98%E1%9E%BD%E1%9E%99%E1%9E%80%E1%9F%82%E1%9E%9C%20_%20new%20melody%202019%20_%20khmer%20remix%202017%20%5B6BDP7QORDYY%5D.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
       </audio>
     </div>
+
+    <div class="music-section">
+      <h2>🔍 Search & Listen to Music</h2>
+      <p>Search for any song or artist and listen instantly.</p>
+      <input type="text" id="musicSearch" placeholder="Enter song or artist name..." style="width:80%;padding:10px;border-radius:8px;border:none;">
+      <button onclick="searchMusic()" style="padding:10px 20px;margin-left:10px;background-color:#ff3333;color:white;border:none;border-radius:8px;font-weight:bold;">Search</button>
+      <div id="musicPlayer" style="margin-top:20px;border-radius:12px;overflow:hidden;background:#000;">
+        <iframe id="musicFrame" src="" width="100%" height="450" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
+    </div>
+
+    <script>
+      function searchMusic() {
+        let query = document.getElementById('musicSearch').value.trim();
+        if (query) {
+          let searchUrl = "https://www.youtube.com/embed?listType=search&list=" + encodeURIComponent(query);
+          document.getElementById('musicFrame').src = searchUrl;
+        }
+      }
+    </script>
 
       <h2>Support the Crew</h2>
       <p>If you'd like to support our work, you can contribute through the method below:</p>
