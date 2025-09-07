@@ -1,226 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FINIXCrew Developer - Overview/Main</title>
-  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINIXCrew Developer</title>
+
+  <meta property="og:title" content="FINIXCrew Developer - Overview/Main" />
+  <meta property="og:description" content="We build, learn, and create games and experiences that leave an impact. Explore creativity, technology, and teamwork with FINIXCrew Developer." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" />
+  <meta property="og:url" content="https://finixhawk671.github.io/FINIXCrewDeveloper/" />
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FINIXCrew Developer - Overview/Main" />
+  <meta name="twitter:description" content="We build, learn, and create games and experiences that leave an impact. Explore creativity, technology, and teamwork with FINIXCrew Developer." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" />
 
   <style>
     body {
+      background-color: #121212;
+      color: white;
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Unbounded', sans-serif;
-      background-color: #0f0f0f;
-      color: white;
+      padding: 0;
     }
-
     header {
-      background-color: #d60000;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .logo {
-      height: 60px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 3em;
-      color: #ff3333;
-      margin-bottom: 10px;
-    }
-
-    .description {
-      text-align: center;
-      font-size: 1.1em;
-      color: #ccc;
-      margin-bottom: 40px;
-    }
-
-    .image-space {
-      width: 100%;
-      height: auto;
-      background-color: #1a1a1a;
-      border-radius: 12px;
-      margin-bottom: 30px;
+      background-color: #1f1f1f;
       padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      text-align: center;
     }
-
-    .image-space img {
-      width: 100%;
-      max-width: 800px;
-      border-radius: 10px;
+    header img {
+      max-height: 100px;
+      display: block;
+      margin: 0 auto 10px;
     }
-
-    .team-section {
-      background-color: #1a1a1a;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-      margin-bottom: 40px;
-    }
-
-    .team-section h2 {
-      color: #ff4d4d;
-      margin-bottom: 20px;
-    }
-
-    .team-list {
-      font-size: 1em;
-      color: #ddd;
-      line-height: 1.8em;
-    }
-
-    .music-section,
-    .funding-section {
-      background-color: #1a1a1a;
-      padding: 30px;
-      border-radius: 12px;
-      margin-top: 40px;
-    }
-
-    .music-section h2,
-    .funding-section h2 {
-      color: #ff4d4d;
-      margin-bottom: 15px;
-    }
-
-    .funding-section img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 10px;
-    }
-
-    audio {
-      width: 100%;
-      max-width: 600px;
+    nav {
       margin-top: 10px;
     }
-
-    footer {
-      text-align: center;
+    nav a {
+      color: #ff4444;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
       padding: 20px;
-      color: #888;
-      background-color: #1a1a1a;
-      margin-top: 60px;
+      max-width: 800px;
+      margin: auto;
+    }
+    h2 {
+      color: #ff4444;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      margin-top: 15px;
+    }
+    input, button {
+      padding: 8px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    input {
+      width: 70%;
+    }
+    button {
+      background-color: #ff4444;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff2222;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" alt="FINIXCrew Logo" class="logo">
+    <img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" alt="FINIXCrew Developer Banner">
+    <h1>FINIXCrew Developer</h1>
     <nav>
-      <a href="index.html">Overview</a>
-      <a href="news.html">News</a>
+  <a href="#overview">Overview</a>
+  <a href="#team">Team</a>
+  <a href="#funding">Funding</a>
+  <a href="#music">Music</a>
+  <a href="security.html">Cyber Security</a>
+  <a href="news.html">News</a>
+  <a href="developer.html">Developer</a>
     </nav>
   </header>
 
-  <div class="container">
-    <h1>FINIXCrew Developer</h1>
-    <p class="description">
-      We build, learn, and create games and experiences that leave an impact. Our mission is to explore creativity, grow together as a team, and develop with technology.
-    </p>
+  <section id="overview">
+    <h2>Overview</h2>
+    <p>Welcome to FINIXCrew Developer. We build, learn, and create games and experiences that leave an impact. Our mission is to combine creativity, technology, and teamwork to explore new possibilities.</p>
+  </section>
 
-    <div class="image-space">
-      <img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" alt="FINIXCrew Banner">
-    </div>
+  <section id="team">
+    <h2>Team</h2>
+    <p>Our crew is made of passionate developers, designers, and learners striving to grow together and contribute meaningfully to the tech and gaming world.</p>
+  </section>
 
-    <div class="team-section">
-      <h2>Founders</h2>
-      <div class="team-list">Ferlin Ferdinand, Cyrus Eden</div>
+  <section id="funding">
+    <h2>Funding</h2>
+    <p>Support FINIXCrew Developer by contributing to our projects. Your support allows us to expand our resources, tools, and creativity to push boundaries further.</p>
+  </section>
 
-      <h2>Team Members</h2>
-      <div class="team-list">Ferlin, Izz, Cyrus, Dayral, Safiyy, Steve, Caden, Affan, Marcus, Ean, Ethanial, Gabby, Heze, Alden, Aina, Isaac</div>
-    </div>
+  <section id="music">
+    <h2>Music</h2>
+    <p>Search for music and listen directly here.</p>
+    <input type="text" id="musicSearch" placeholder="Enter song or artist name">
+    <button onclick="searchMusic()">Play</button>
+    <iframe id="musicFrame" src="" allow="autoplay; encrypted-media"></iframe>
+  </section>
 
-        <div class="music-section">
-      <h2>🎧 Featured Music</h2>
-      <p>ស្រាមួយកែវ - Khmer Remix</p>
-      <audio controls>
-        <source src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/%E1%9E%9F%E1%9F%92%E1%9E%9A%E1%9E%B6%E1%9E%98%E1%9E%BD%E1%9E%99%E1%9E%80%E1%9F%82%E1%9E%9C%20_%20new%20melody%202019%20_%20khmer%20remix%202017%20%5B6BDP7QORDYY%5D.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
-
-<div class="music-section">
-  <h2>🔍 Search & Listen to Music</h2>
-  <p>Paste a YouTube link or enter the video ID to listen instantly.</p>
-  <input type="text" id="musicSearch" placeholder="Enter YouTube link or ID..." style="width:80%;padding:10px;border-radius:8px;border:none;">
-  <button onclick="playMusic()" style="padding:10px 20px;margin-left:10px;background-color:#ff3333;color:white;border:none;border-radius:8px;font-weight:bold;">Play</button>
-  <div id="musicPlayer" style="margin-top:20px;border-radius:12px;overflow:hidden;background:#000;">
-    <iframe id="musicFrame" src="" width="100%" height="450" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  </div>
-</div>
-
-<script>
-  function playMusic() {
-    let input = document.getElementById('musicSearch').value.trim();
-    if (input) {
-      let videoId = "";
-      let match = input.match(/(?:youtu\.be\/|youtube\.com\/watch\?v=)([a-zA-Z0-9_-]{11})/);
-      if (match) {
-        videoId = match[1];
-      } else {
-        videoId = input;
+  <script>
+    function searchMusic() {
+      let query = document.getElementById('musicSearch').value.trim();
+      if (query) {
+        let searchUrl = "https://www.youtube.com/embed?listType=search&list=" + encodeURIComponent(query);
+        document.getElementById('musicFrame').src = searchUrl;
       }
-
-      let embedUrl = "https://www.youtube-nocookie.com/embed/" + videoId + "?autoplay=1";
-      document.getElementById('musicFrame').src = embedUrl;
     }
-  }
-</script>
-
-
-<script>
-  function searchMusic() {
-    let query = document.getElementById('musicSearch').value.trim();
-    if (query) {
-      let searchUrl = "https://www.youtube.com/results?search_query=" + encodeURIComponent(query);
-      document.getElementById('musicFrame').src = searchUrl;
-    }
-  }
-</script>
-
-
-    <script>
-      function searchMusic() {
-        let query = document.getElementById('musicSearch').value.trim();
-        if (query) {
-          let searchUrl = "https://www.youtube.com/embed?listType=search&list=" + encodeURIComponent(query);
-          document.getElementById('musicFrame').src = searchUrl;
-        }
-      }
-    </script>
-
-      <h2>Support the Crew</h2>
-      <p>If you'd like to support our work, you can contribute through the method below:</p>
-      <img src="https://github.com/FINIXHAWK671/FINIXCrewDeveloper/blob/main/photo_2025-08-06_21-04-06.jpg?raw=true" alt="Funding QR / Image">
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 FINIXCrew Developer. All rights reserved.
-  </footer>
-
+  </script>
 </body>
 </html>
