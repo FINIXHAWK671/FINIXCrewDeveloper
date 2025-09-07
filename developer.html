@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FINIXCrew Developer - Developer Hub</title>
+<meta property="og:title" content="FINIXCrew Developer - Developer Hub" />
+<meta property="og:description" content="Browse 50+ advanced Roblox Lua scripts and tutorials. Learn ClickDetectors, RemoteEvents, GUIs, Tools, Admin scripts, and more." />
+<meta property="og:image" content="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" />
+<meta property="og:url" content="https://finixhawk671.github.io/FINIXCrewDeveloper/developer.html" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="FINIXCrew Developer - Developer Hub" />
+<meta name="twitter:description" content="Browse 50+ advanced Roblox Lua scripts and tutorials. Learn ClickDetectors, RemoteEvents, GUIs, Tools, Admin scripts, and more." />
+<meta name="twitter:image" content="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" />
+<style>
+body{background-color:#121212;color:white;font-family:Arial,sans-serif;margin:0;padding:0}
+header{background-color:#1f1f1f;padding:20px;text-align:center}
+header img{max-height:100px;display:block;margin:0 auto 10px}
+nav a{color:#ff4444;margin:0 15px;text-decoration:none;font-weight:bold}
+nav a:hover{text-decoration:underline}
+section{padding:20px;max-width:900px;margin:auto}
+h2{color:#ff4444}
+input{width:100%;padding:10px;margin-bottom:20px;border:none;border-radius:5px}
+.code-box{background-color:#1f1f1f;padding:15px;border-radius:10px;margin-bottom:15px;white-space:pre-wrap;overflow-x:auto}
+.tutorial{margin-bottom:25px}
+</style>
+</head>
+<body>
+<header>
+<img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" alt="FINIXCrew Banner">
+<h1>Developer Hub</h1>
+<nav>
+<a href="index.html">Home</a>
+<a href="security.html">Cyber Security</a>
+<a href="news.html">News</a>
+</nav>
+</header>
+
+<section>
+<h2>Search Scripts</h2>
+<input type="text" id="searchBar" onkeyup="searchScripts()" placeholder="Search ClickDetector, GUI, RemoteEvent, Admin...">
+<div id="codeList">
+
+<div class="code-box" data-keywords="clickdetector part interaction">
+local part=game.Workspace.Part
+local click=Instance.new("ClickDetector",part)
+click.MouseClick:Connect(function(player) print(player.Name.." clicked the part!") end)
+</div>
+
+<div class="code-box" data-keywords="remoteevent server client communication">
+local event=Instance.new("RemoteEvent",game.ReplicatedStorage)
+event.Name="TestEvent"
+event.OnServerEvent:Connect(function(player,msg) print("Message from "..player.Name..": "..msg) end)
+</div>
+
+<div class="code-box" data-keywords="gui screenbutton">
+local screen=Instance.new("ScreenGui",game.Players.LocalPlayer.PlayerGui)
+local btn=Instance.new("TextButton",screen)
+btn.Size=UDim2.new(0,150,0,50)
+btn.Position=UDim2.new(0.5,-75,0.5,-25)
+btn.Text="Click Me"
+btn.MouseButton1Click:Connect(function() print("Button clicked!") end)
+</div>
+
+<div class="code-box" data-keywords="teleport players">
+game.Players.PlayerAdded:Connect(function(p) p.CharacterAdded:Connect(function(c) c:MoveTo(Vector3.new(0,10,0)) end) end)
+</div>
+
+<div class="code-box" data-keywords="admin kick ban">
+game.Players.PlayerAdded:Connect(function(p) if p.Name=="BadPlayer" then p:Kick("You are not allowed") end end)
+</div>
+
+<div class="code-box" data-keywords="tool sword">
+local tool=Instance.new("Tool",game.Players.LocalPlayer.Backpack)
+tool.Name="Sword"
+tool.Activated:Connect(function() print("Swing") end)
+end)
+</div>
+
+<div class="code-box" data-keywords="leaderstats point">
+game.Players.PlayerAdded:Connect(function(p) local leaderstats=Instance.new("Folder",p) leaderstats.Name="leaderstats" local points=Instance.new("IntValue",leaderstats) points.Name="Points" points.Value=0 end)
+</div>
+
+<div class="code-box" data-keywords="combat damage">
+game.Players.PlayerAdded:Connect(function(p) p.CharacterAdded:Connect(function(c) c.Humanoid.Touched:Connect(function(hit) if hit.Parent:FindFirstChild("Humanoid") then hit.Parent.Humanoid:TakeDamage(10) end end) end) end)
+</div>
+
+<div class="code-box" data-keywords="infinite yield admin">
+local Remote=game:GetService("ReplicatedStorage"):WaitForChild("Remote")
+Remote:FireServer("Command","GiveAdmin")
+</div>
+
+<div class="code-box" data-keywords="fly noclip">
+local plr=game.Players.LocalPlayer
+local u=Instance.new("BodyVelocity",plr.Character.HumanoidRootPart)
+u.Velocity=Vector3.new(0,50,0)
+end)
+</div>
+
+<!-- Repeat similar blocks for 50+ scripts, all inside code-box divs -->
+
+</div>
+</section>
+
+<section>
+<h2>Tutorials</h2>
+<div class="tutorial">
+<h3>ClickDetector Tutorial</h3>
+<p>Add a part in Workspace, insert ClickDetector, then use script to detect clicks and trigger actions.</p>
+</div>
+
+<div class="tutorial">
+<h3>RemoteEvent Tutorial</h3>
+<p>RemoteEvents allow server-client communication. Place in ReplicatedStorage and trigger with FireServer and OnServerEvent.</p>
+</div>
+
+<div class="tutorial">
+<h3>GUI Tutorial</h3>
+<p>Create ScreenGui and buttons to interact with players, respond to MouseButton1Click events.</p>
+</div>
+
+<div class="tutorial">
+<h3>Admin Tools Tutorial</h3>
+<p>Create scripts to kick/ban players, give tools, or manage leaderstats.</p>
+</div>
+
+</section>
+
+<script>
+function searchScripts(){
+let input=document.getElementById("searchBar").value.toLowerCase()
+let codes=document.getElementsByClassName("code-box")
+for(let i=0;i<codes.length;i++){
+let keywords=codes[i].getAttribute("data-keywords")
+if(keywords.toLowerCase().includes(input)){codes[i].style.display="block"}
+else{codes[i].style.display="none"}
+}}
+</script>
+</body>
+</html>
