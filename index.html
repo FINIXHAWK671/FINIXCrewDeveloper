@@ -9,176 +9,208 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+background:#000;
+color:#e6e6e6;
+font-family:'Inter',sans-serif;
+overflow:hidden
 }
 
-body {
-  background: #0a0a0a;
-  color: #e6e6e6;
-  font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
+#intro{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:9999
 }
 
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)),
-  url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+#intro iframe{
+width:100%;
+height:100%;
+border:none
 }
 
-.hero h1 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 4rem;
-  letter-spacing: 4px;
-  color: #ffffff;
+#enterBtn{
+position:absolute;
+bottom:40px;
+padding:12px 30px;
+border:1px solid #ff2a2a;
+color:#ff2a2a;
+background:transparent;
+cursor:pointer;
+font-family:'Oswald',sans-serif;
+letter-spacing:2px
 }
 
-.hero p {
-  margin-top: 15px;
-  max-width: 600px;
-  font-size: 1.1rem;
-  opacity: 0.8;
+#enterBtn:hover{
+background:#ff2a2a;
+color:#000
 }
 
-.hero a {
-  margin-top: 30px;
-  padding: 12px 30px;
-  border: 1px solid #ff2a2a;
-  color: #ff2a2a;
-  text-decoration: none;
-  transition: 0.3s;
+#main{
+display:none;
+overflow-x:hidden
 }
 
-.hero a:hover {
-  background: #ff2a2a;
-  color: #000;
+.hero{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.95)),
+url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center
 }
 
-section {
-  padding: 80px 20px;
-  max-width: 1000px;
-  margin: auto;
+.hero img{
+max-width:180px;
+margin-bottom:20px
 }
 
-h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  color: #ff2a2a;
+.hero h1{
+font-family:'Oswald',sans-serif;
+font-size:3.5rem;
+letter-spacing:4px
 }
 
-p {
-  line-height: 1.7;
-  opacity: 0.85;
+.hero span{
+color:#ff2a2a;
+font-size:0.9rem;
+opacity:0.7
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 25px;
-  margin-top: 40px;
+.hero p{
+margin-top:15px;
+max-width:600px;
+opacity:0.8
 }
 
-.card {
-  background: #121212;
-  padding: 25px;
-  border: 1px solid #1f1f1f;
-  transition: 0.3s;
+section{
+padding:80px 20px;
+max-width:1000px;
+margin:auto
 }
 
-.card:hover {
-  border-color: #ff2a2a;
-  transform: translateY(-5px);
+h2{
+font-family:'Oswald',sans-serif;
+color:#ff2a2a;
+margin-bottom:20px
 }
 
-.footer {
-  text-align: center;
-  padding: 40px 20px;
-  background: #050505;
-  font-size: 0.9rem;
-  opacity: 0.6;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px
 }
 
-.link {
-  color: #ff2a2a;
-  text-decoration: none;
+.card{
+background:#111;
+padding:25px;
+border:1px solid #1f1f1f;
+transition:.3s
 }
 
-.link:hover {
-  text-decoration: underline;
+.card:hover{
+border-color:#ff2a2a;
+transform:translateY(-5px)
 }
 
-@media(max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
-  }
+a{
+color:#ff2a2a;
+text-decoration:none
+}
+
+.footer{
+text-align:center;
+padding:40px;
+background:#050505;
+opacity:.6
+}
+
+@media(max-width:768px){
+.hero h1{font-size:2.2rem}
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-  <h1>FINIXCREW</h1>
-  <p>Student-based horror game development team crafting immersive psychological experiences.</p>
-  <a href="#about">ENTER PROJECT</a>
+<div id="intro">
+<iframe src="https://www.youtube.com/embed/DTfyK4o5s4M?autoplay=1&controls=0&showinfo=0&modestbranding=1"></iframe>
+<button id="enterBtn" onclick="enterSite()">ENTER</button>
 </div>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>
-  FINIXCREW Developer is a student-based game development group focused on creating immersive horror experiences using Godot Engine.
-  We are a passionate team collaborating to build a psychological horror game inspired by the atmosphere and storytelling style of Red Barrels.
-  </p>
+<div id="main">
+
+<div class="hero">
+<img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg">
+<h1>FINIXCREW</h1>
+<span>Since 2024</span>
+<p>Student-based horror game development team crafting immersive psychological experiences.</p>
+</div>
+
+<section>
+<h2>About</h2>
+<p>
+FINIXCREW Developer is a student-based game development group focused on creating immersive horror experiences using Godot Engine.
+We are a passionate team building a psychological horror game inspired by the atmosphere and storytelling style of Red Barrels.
+This is a volunteer project driven by creativity, learning, and teamwork.
+</p>
 </section>
 
 <section>
-  <h2>Our Vision</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Horror Atmosphere</h3>
-      <p>We focus on tension, darkness, and psychological fear rather than cheap jumpscares.</p>
-    </div>
-    <div class="card">
-      <h3>Learning & Growth</h3>
-      <p>This is a volunteer project driven by creativity, learning, and teamwork.</p>
-    </div>
-    <div class="card">
-      <h3>Game Development</h3>
-      <p>We aim to build a small but polished horror experience with real development quality.</p>
-    </div>
-  </div>
+<h2>Vision</h2>
+<div class="grid">
+<div class="card"><h3>Atmosphere</h3><p>We create tension-driven horror with cinematic immersion.</p></div>
+<div class="card"><h3>Growth</h3><p>Learning real development skills through collaboration.</p></div>
+<div class="card"><h3>Quality</h3><p>Small but polished horror experience.</p></div>
+</div>
 </section>
 
 <section>
-  <h2>Industry Inspiration</h2>
-  <p>
-  Our work is inspired by leading horror game studios that define the genre with atmosphere and storytelling.
-  We highly respect and promote studios like Red Barrels, creators of Outlast.
-  </p>
-  <br>
-  <a class="link" href="https://redbarrelsgames.com/" target="_blank">
-    Visit Red Barrels →
-  </a>
+<h2>Industry</h2>
+<p>
+Inspired by modern horror studios pushing boundaries in storytelling and fear design.
+We support and promote Red Barrels.
+</p>
+<br>
+<a href="https://redbarrelsgames.com/" target="_blank">Visit Red Barrels →</a>
 </section>
 
 <section>
-  <h2>Join The Crew</h2>
-  <p>
-  We welcome developers, artists, and composers who are passionate about game development and willing to collaborate in a supportive environment.
-  </p>
+<h2>Developers</h2>
+<div class="grid">
+<div class="card"><h3>Jeffrey</h3><p>Project Lead / Direction</p></div>
+<div class="card"><h3>Cyrus</h3><p>Level Design</p></div>
+<div class="card"><h3>Izz</h3><p>Support / Testing</p></div>
+<div class="card"><h3>Adjisan</h3><p>UI Developer<br><a href="https://youtube.com/@theonly_adjisan" target="_blank">YouTube</a></p></div>
+<div class="card"><h3>Albert Carey</h3><p><a href="https://www.youtube.com/@Brony242" target="_blank">YouTube</a></p></div>
+</div>
 </section>
 
 <div class="footer">
-  FINIXCREW Developer © 2026 — Built with passion in horror.
+FINIXCREW Developer © 2026 — Since 2024
 </div>
+
+</div>
+
+<script>
+function enterSite(){
+document.getElementById('intro').style.display='none'
+document.getElementById('main').style.display='block'
+document.body.style.overflow='auto'
+}
+</script>
 
 </body>
 </html>
