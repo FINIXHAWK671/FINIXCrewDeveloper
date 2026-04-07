@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FINIXCREW Developer</title>
+<title>FINIXCREW DEVELOPER WEBSITE</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
@@ -18,7 +18,7 @@ font-family:'Inter',sans-serif;
 overflow:hidden
 }
 
-#intro{
+#gate{
 position:fixed;
 top:0;
 left:0;
@@ -26,33 +26,38 @@ width:100%;
 height:100%;
 background:#000;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
-flex-direction:column;
-z-index:9999
+z-index:9999;
+text-align:center
 }
 
-#intro iframe{
-width:100%;
-height:100%;
-border:none
-}
-
-#enterBtn{
-position:absolute;
-bottom:40px;
-padding:12px 30px;
-border:1px solid #ff2a2a;
-color:#ff2a2a;
-background:transparent;
-cursor:pointer;
+#gate h1{
 font-family:'Oswald',sans-serif;
-letter-spacing:2px
+letter-spacing:3px;
+margin-bottom:20px
 }
 
-#enterBtn:hover{
-background:#ff2a2a;
+.btn{
+margin:10px;
+padding:12px 30px;
+border:1px solid #fff;
+background:transparent;
+color:#fff;
+cursor:pointer;
+transition:.3s
+}
+
+.btn:hover{
+background:#fff;
 color:#000
+}
+
+#denied{
+display:none;
+font-size:1.2rem;
+color:#ff2a2a
 }
 
 #main{
@@ -62,7 +67,7 @@ overflow-x:hidden
 
 .hero{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.95)),
+background:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)),
 url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
 display:flex;
 flex-direction:column;
@@ -76,28 +81,27 @@ max-width:180px;
 margin-bottom:20px
 }
 
-.hero h1{
+.highlight{
+background:#fff;
+color:#000;
+padding:10px 20px;
 font-family:'Oswald',sans-serif;
-font-size:3.5rem;
-letter-spacing:4px
-}
-
-.hero span{
-color:#ff2a2a;
-font-size:0.9rem;
-opacity:0.7
-}
-
-.hero p{
-margin-top:15px;
-max-width:600px;
-opacity:0.8
+letter-spacing:4px;
+font-size:2rem
 }
 
 section{
 padding:80px 20px;
-max-width:1000px;
-margin:auto
+max-width:1100px;
+margin:auto;
+opacity:0;
+transform:translateY(40px);
+transition:1s
+}
+
+section.show{
+opacity:1;
+transform:translateY(0)
 }
 
 h2{
@@ -106,28 +110,22 @@ color:#ff2a2a;
 margin-bottom:20px
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:30px
+.sentax{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+align-items:center
 }
 
-.card{
-background:#111;
-padding:25px;
-border:1px solid #1f1f1f;
-transition:.3s
+.sentax img{
+width:100%;
+max-width:400px;
+border:1px solid #222
 }
 
-.card:hover{
-border-color:#ff2a2a;
-transform:translateY(-5px)
-}
-
-a{
-color:#ff2a2a;
-text-decoration:none
+.sentax-text{
+flex:1;
+min-width:250px
 }
 
 .footer{
@@ -138,78 +136,97 @@ opacity:.6
 }
 
 @media(max-width:768px){
-.hero h1{font-size:2.2rem}
+.highlight{font-size:1.5rem}
+.sentax{flex-direction:column}
 }
 </style>
 </head>
 
 <body>
 
-<div id="intro">
-<iframe src="https://www.youtube.com/embed/DTfyK4o5s4M?autoplay=1&controls=0&showinfo=0&modestbranding=1"></iframe>
-<button id="enterBtn" onclick="enterSite()">ENTER</button>
+<div id="gate">
+<h1>ARE YOU A ROBOT?</h1>
+<div>
+<button class="btn" onclick="enter()">YES</button>
+<button class="btn" onclick="deny()">NO</button>
+</div>
+<div id="denied">Access Denied. You are not allowed.</div>
 </div>
 
 <div id="main">
 
 <div class="hero">
 <img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg">
-<h1>FINIXCREW</h1>
-<span>Since 2024</span>
-<p>Student-based horror game development team crafting immersive psychological experiences.</p>
+<div class="highlight">FINIXCREW DEVELOPER</div>
+<p>Since 2024 — Psychological Horror Development Team</p>
 </div>
 
 <section>
 <h2>About</h2>
 <p>
-FINIXCREW Developer is a student-based game development group focused on creating immersive horror experiences using Godot Engine.
-We are a passionate team building a psychological horror game inspired by the atmosphere and storytelling style of Red Barrels.
-This is a volunteer project driven by creativity, learning, and teamwork.
+FINIXCREW Developer is a student-based team focused on immersive horror experiences using Godot Engine.
+This is a volunteer-driven project built through passion, learning, and collaboration.
 </p>
 </section>
 
 <section>
-<h2>Vision</h2>
-<div class="grid">
-<div class="card"><h3>Atmosphere</h3><p>We create tension-driven horror with cinematic immersion.</p></div>
-<div class="card"><h3>Growth</h3><p>Learning real development skills through collaboration.</p></div>
-<div class="card"><h3>Quality</h3><p>Small but polished horror experience.</p></div>
+<h2>SENTAX Crew: Artificial Psychosis</h2>
+<div class="sentax">
+<img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/sentax.jpeg">
+<div class="sentax-text">
+<p>
+In collaboration with Indonesia developers, SENTAX Crew: Artificial Psychosis is a psychological horror project set in a restricted research facility isolated from society.
+</p>
+<br>
+<p>
+The facility conducts experimental procedures on human and animal subjects involving neural manipulation, artificial intelligence integration, and behavioral conditioning.
+</p>
+<br>
+<p>
+SSRA (Synaptic Simulation Research Authority) operates the facility, aiming to merge biological consciousness with adaptive AI systems.
+</p>
+<br>
+<p>
+As experiments progress, subjects begin experiencing distorted reality, religious hallucinations, and loss of identity, blurring the boundary between faith, control, and madness.
+</p>
+</div>
 </div>
 </section>
 
 <section>
 <h2>Industry</h2>
 <p>
-Inspired by modern horror studios pushing boundaries in storytelling and fear design.
-We support and promote Red Barrels.
+Inspired by leading horror studios and their approach to immersive storytelling.
 </p>
-<br>
 <a href="https://redbarrelsgames.com/" target="_blank">Visit Red Barrels →</a>
 </section>
 
-<section>
-<h2>Developers</h2>
-<div class="grid">
-<div class="card"><h3>Jeffrey</h3><p>Project Lead / Direction</p></div>
-<div class="card"><h3>Cyrus</h3><p>Level Design</p></div>
-<div class="card"><h3>Izz</h3><p>Support / Testing</p></div>
-<div class="card"><h3>Adjisan</h3><p>UI Developer<br><a href="https://youtube.com/@theonly_adjisan" target="_blank">YouTube</a></p></div>
-<div class="card"><h3>Albert Carey</h3><p><a href="https://www.youtube.com/@Brony242" target="_blank">YouTube</a></p></div>
-</div>
-</section>
-
 <div class="footer">
-FINIXCREW Developer © 2026 — Since 2024
+FINIXCREW Developer © 2026
 </div>
 
 </div>
 
 <script>
-function enterSite(){
-document.getElementById('intro').style.display='none'
+function enter(){
+document.getElementById('gate').style.display='none'
 document.getElementById('main').style.display='block'
 document.body.style.overflow='auto'
 }
+
+function deny(){
+document.getElementById('denied').style.display='block'
+}
+
+let sections=document.querySelectorAll('section')
+window.addEventListener('scroll',()=>{
+sections.forEach(sec=>{
+let top=sec.getBoundingClientRect().top
+if(top<window.innerHeight-100){
+sec.classList.add('show')
+}
+})
+})
 </script>
 
 </body>
