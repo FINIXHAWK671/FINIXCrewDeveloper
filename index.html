@@ -18,7 +18,15 @@ font-family:'Inter',sans-serif;
 overflow:hidden
 }
 
-#gate{
+.highlight{
+background:#fff;
+color:#000;
+padding:4px 10px;
+font-family:'Oswald',sans-serif;
+letter-spacing:2px
+}
+
+#gate,#videoGate{
 position:fixed;
 top:0;
 left:0;
@@ -33,10 +41,12 @@ z-index:9999;
 text-align:center
 }
 
-#gate h1{
-font-family:'Oswald',sans-serif;
-letter-spacing:3px;
-margin-bottom:20px
+#videoGate{display:none}
+
+iframe{
+width:100%;
+height:100%;
+border:none
 }
 
 .btn{
@@ -56,8 +66,18 @@ color:#000
 
 #denied{
 display:none;
-font-size:1.2rem;
-color:#ff2a2a
+color:#ff2a2a;
+margin-top:15px
+}
+
+#skip{
+position:absolute;
+bottom:40px;
+padding:10px 25px;
+border:1px solid #fff;
+color:#fff;
+background:rgba(0,0,0,0.6);
+cursor:pointer
 }
 
 #main{
@@ -79,15 +99,6 @@ text-align:center
 .hero img{
 max-width:180px;
 margin-bottom:20px
-}
-
-.highlight{
-background:#fff;
-color:#000;
-padding:10px 20px;
-font-family:'Oswald',sans-serif;
-letter-spacing:4px;
-font-size:2rem
 }
 
 section{
@@ -135,10 +146,6 @@ background:#050505;
 opacity:.6
 }
 
-@media(max-width:768px){
-.highlight{font-size:1.5rem}
-.sentax{flex-direction:column}
-}
 </style>
 </head>
 
@@ -147,10 +154,15 @@ opacity:.6
 <div id="gate">
 <h1>ARE YOU A ROBOT?</h1>
 <div>
-<button class="btn" onclick="enter()">YES</button>
+<button class="btn" onclick="yes()">YES</button>
 <button class="btn" onclick="deny()">NO</button>
 </div>
-<div id="denied">Access Denied. You are not allowed.</div>
+<div id="denied">Access Denied</div>
+</div>
+
+<div id="videoGate">
+<iframe src="https://www.youtube.com/embed/DTfyK4o5s4M?autoplay=1&mute=1&controls=0&loop=1&playlist=DTfyK4o5s4M"></iframe>
+<button id="skip" onclick="enter()">SKIP</button>
 </div>
 
 <div id="main">
@@ -158,14 +170,14 @@ opacity:.6
 <div class="hero">
 <img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg">
 <div class="highlight">FINIXCREW DEVELOPER</div>
-<p>Since 2024 — Psychological Horror Development Team</p>
+<p>Since 2024 — Project initiated last month</p>
 </div>
 
 <section>
 <h2>About</h2>
 <p>
-FINIXCREW Developer is a student-based team focused on immersive horror experiences using Godot Engine.
-This is a volunteer-driven project built through passion, learning, and collaboration.
+<span class="highlight">FINIXCREW DEVELOPER</span> is a student-based horror development team focused on immersive psychological experiences using Godot Engine.
+This is a volunteer-driven project created through passion, learning, and collaboration.
 </p>
 </section>
 
@@ -175,28 +187,33 @@ This is a volunteer-driven project built through passion, learning, and collabor
 <img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/sentax.jpeg">
 <div class="sentax-text">
 <p>
-In collaboration with Indonesia developers, SENTAX Crew: Artificial Psychosis is a psychological horror project set in a restricted research facility isolated from society.
+Developed in collaboration with <span class="highlight">Indonesian Developers</span>, this project takes place in a remote mountain facility located in a classified <span class="highlight">[REDACTED]</span> region.
 </p>
 <br>
 <p>
-The facility conducts experimental procedures on human and animal subjects involving neural manipulation, artificial intelligence integration, and behavioral conditioning.
+The facility is operated by <span class="highlight">SSRA</span> (Synaptic Simulation Research Authority), conducting experimental procedures on human and animal subjects involving neural manipulation, artificial intelligence integration, and behavioral conditioning.
 </p>
 <br>
 <p>
-SSRA (Synaptic Simulation Research Authority) operates the facility, aiming to merge biological consciousness with adaptive AI systems.
-</p>
-<br>
-<p>
-As experiments progress, subjects begin experiencing distorted reality, religious hallucinations, and loss of identity, blurring the boundary between faith, control, and madness.
+As experiments progress, subjects begin experiencing distorted perception, religious hallucinations, and loss of identity, blurring the line between reality, faith, and psychological control.
 </p>
 </div>
 </div>
 </section>
 
 <section>
+<h2>Channels</h2>
+<p>
+<span class="highlight">@FINIXCrew_Developer</span><br>
+<a href="https://youtube.com/@theonly_adjisan" target="_blank">Adjisan YouTube</a><br>
+<a href="https://www.youtube.com/@Brony242" target="_blank">Albert Carey YouTube</a>
+</p>
+</section>
+
+<section>
 <h2>Industry</h2>
 <p>
-Inspired by leading horror studios and their approach to immersive storytelling.
+Inspired by modern horror studios shaping immersive storytelling experiences.
 </p>
 <a href="https://redbarrelsgames.com/" target="_blank">Visit Red Barrels →</a>
 </section>
@@ -208,14 +225,19 @@ FINIXCREW Developer © 2026
 </div>
 
 <script>
-function enter(){
+function yes(){
 document.getElementById('gate').style.display='none'
-document.getElementById('main').style.display='block'
-document.body.style.overflow='auto'
+document.getElementById('videoGate').style.display='flex'
 }
 
 function deny(){
 document.getElementById('denied').style.display='block'
+}
+
+function enter(){
+document.getElementById('videoGate').style.display='none'
+document.getElementById('main').style.display='block'
+document.body.style.overflow='auto'
 }
 
 let sections=document.querySelectorAll('section')
