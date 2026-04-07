@@ -1,130 +1,185 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FINIXCrew Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FINIXCREW Developer</title>
 
-  <meta property="og:title" content="FINIXCrew Developer - Overview/Main" />
-  <meta property="og:description" content="We build, learn, and create games and experiences that leave an impact. Explore creativity, technology, and teamwork with FINIXCrew Developer." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" />
-  <meta property="og:url" content="https://finixhawk671.github.io/FINIXCrewDeveloper/" />
-  <meta property="og:type" content="website" />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="FINIXCrew Developer - Overview/Main" />
-  <meta name="twitter:description" content="We build, learn, and create games and experiences that leave an impact. Explore creativity, technology, and teamwork with FINIXCrew Developer." />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" />
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <style>
-    body {
-      background-color: #121212;
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #1f1f1f;
-      padding: 20px;
-      text-align: center;
-    }
-    header img {
-      max-height: 100px;
-      display: block;
-      margin: 0 auto 10px;
-    }
-    nav {
-      margin-top: 10px;
-    }
-    nav a {
-      color: #ff4444;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    h2 {
-      color: #ff4444;
-    }
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      margin-top: 15px;
-    }
-    input, button {
-      padding: 8px;
-      margin-top: 10px;
-      border: none;
-      border-radius: 5px;
-    }
-    input {
-      width: 70%;
-    }
-    button {
-      background-color: #ff4444;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #ff2222;
-    }
-  </style>
+body {
+  background: #0a0a0a;
+  color: #e6e6e6;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)),
+  url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4rem;
+  letter-spacing: 4px;
+  color: #ffffff;
+}
+
+.hero p {
+  margin-top: 15px;
+  max-width: 600px;
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.hero a {
+  margin-top: 30px;
+  padding: 12px 30px;
+  border: 1px solid #ff2a2a;
+  color: #ff2a2a;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.hero a:hover {
+  background: #ff2a2a;
+  color: #000;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #ff2a2a;
+}
+
+p {
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #121212;
+  padding: 25px;
+  border: 1px solid #1f1f1f;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: #ff2a2a;
+  transform: translateY(-5px);
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  background: #050505;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.link {
+  color: #ff2a2a;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+@media(max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/photo_2025-08-04_21-45-36.jpg" alt="FINIXCrew Developer Banner">
-    <h1>FINIXCrew Developer</h1>
-    <nav>
-  <a href="#overview">Overview</a>
-  <a href="#team">Team</a>
-  <a href="#funding">Funding</a>
-  <a href="#music">Music</a>
-  <a href="security.html">Cyber Security</a>
-  <a href="news.html">News</a>
-  <a href="developer.html">Developer</a>
-    </nav>
-  </header>
 
-  <section id="overview">
-    <h2>Overview</h2>
-    <p>Welcome to FINIXCrew Developer. We build, learn, and create games and experiences that leave an impact. Our mission is to combine creativity, technology, and teamwork to explore new possibilities.</p>
-  </section>
+<div class="hero">
+  <h1>FINIXCREW</h1>
+  <p>Student-based horror game development team crafting immersive psychological experiences.</p>
+  <a href="#about">ENTER PROJECT</a>
+</div>
 
-  <section id="team">
-    <h2>Team</h2>
-    <p>Our crew is made of passionate developers, designers, and learners striving to grow together and contribute meaningfully to the tech and gaming world.</p>
-  </section>
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+  FINIXCREW Developer is a student-based game development group focused on creating immersive horror experiences using Godot Engine.
+  We are a passionate team collaborating to build a psychological horror game inspired by the atmosphere and storytelling style of Red Barrels.
+  </p>
+</section>
 
-  <section id="funding">
-    <h2>Funding</h2>
-    <p>Support FINIXCrew Developer by contributing to our projects. Your support allows us to expand our resources, tools, and creativity to push boundaries further.</p>
-  </section>
+<section>
+  <h2>Our Vision</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Horror Atmosphere</h3>
+      <p>We focus on tension, darkness, and psychological fear rather than cheap jumpscares.</p>
+    </div>
+    <div class="card">
+      <h3>Learning & Growth</h3>
+      <p>This is a volunteer project driven by creativity, learning, and teamwork.</p>
+    </div>
+    <div class="card">
+      <h3>Game Development</h3>
+      <p>We aim to build a small but polished horror experience with real development quality.</p>
+    </div>
+  </div>
+</section>
 
-  <section id="music">
-    <h2>Music</h2>
-    <p>Search for music and listen directly here.</p>
-    <input type="text" id="musicSearch" placeholder="Enter song or artist name">
-    <button onclick="searchMusic()">Play</button>
-    <iframe id="musicFrame" src="" allow="autoplay; encrypted-media"></iframe>
-  </section>
+<section>
+  <h2>Industry Inspiration</h2>
+  <p>
+  Our work is inspired by leading horror game studios that define the genre with atmosphere and storytelling.
+  We highly respect and promote studios like Red Barrels, creators of Outlast.
+  </p>
+  <br>
+  <a class="link" href="https://redbarrelsgames.com/" target="_blank">
+    Visit Red Barrels →
+  </a>
+</section>
 
-  <script>
-    function searchMusic() {
-      let query = document.getElementById('musicSearch').value.trim();
-      if (query) {
-        let searchUrl = "https://www.youtube.com/embed?listType=search&list=" + encodeURIComponent(query);
-        document.getElementById('musicFrame').src = searchUrl;
-      }
-    }
-  </script>
+<section>
+  <h2>Join The Crew</h2>
+  <p>
+  We welcome developers, artists, and composers who are passionate about game development and willing to collaborate in a supportive environment.
+  </p>
+</section>
+
+<div class="footer">
+  FINIXCREW Developer © 2026 — Built with passion in horror.
+</div>
+
 </body>
 </html>
+```
