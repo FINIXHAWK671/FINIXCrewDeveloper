@@ -8,13 +8,6 @@
 <meta property="og:title" content="FINIXCREW DEVELOPER">
 <meta property="og:description" content="SENTAX Crew: Artificial Psychosis — A psychological horror project set in a classified mountain facility involving AI, human and animal experimentation.">
 <meta property="og:image" content="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/sentax.jpeg">
-<meta property="og:url" content="https://finixhawk671.github.io/FINIXCrewDeveloper/">
-<meta property="og:type" content="website">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="FINIXCREW DEVELOPER">
-<meta name="twitter:description" content="A global student horror project exploring AI, religion and psychological collapse.">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/sentax.jpeg">
 
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
@@ -28,6 +21,7 @@ font-family:'Inter',sans-serif;
 overflow:hidden
 }
 
+/* ===== TEXT ===== */
 .highlight{
 background:#fff;
 color:#000;
@@ -36,6 +30,7 @@ font-family:'Oswald',sans-serif;
 letter-spacing:2px
 }
 
+/* ===== GATE ===== */
 #gate,#videoGate{
 position:fixed;
 top:0;
@@ -59,21 +54,26 @@ height:100%;
 border:none
 }
 
+/* ===== BUTTON ===== */
 .btn{
-margin:10px;
+margin:12px;
 padding:12px 30px;
 border:1px solid #fff;
 background:transparent;
 color:#fff;
 cursor:pointer;
-transition:.3s
+transition:.3s;
+text-decoration:none;
+display:inline-block;
 }
 
 .btn:hover{
 background:#fff;
-color:#000
+color:#000;
+box-shadow:0 0 15px rgba(255,255,255,0.4);
 }
 
+/* ===== DENY ===== */
 #denied{
 display:none;
 color:#ff2a2a;
@@ -90,14 +90,17 @@ background:rgba(0,0,0,0.6);
 cursor:pointer
 }
 
+/* ===== MAIN ===== */
 #main{
 display:none;
 overflow-x:hidden
 }
 
+/* ===== HERO ===== */
 .hero{
 height:100vh;
-background:linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)),
+background:
+linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.95)),
 url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') center/cover;
 display:flex;
 flex-direction:column;
@@ -108,9 +111,11 @@ text-align:center
 
 .hero img{
 max-width:180px;
-margin-bottom:20px
+margin-bottom:20px;
+filter:brightness(0.9) contrast(1.1);
 }
 
+/* ===== SECTIONS ===== */
 section{
 padding:80px 20px;
 max-width:1100px;
@@ -131,6 +136,7 @@ color:#ff2a2a;
 margin-bottom:20px
 }
 
+/* ===== SENTAX ===== */
 .sentax{
 display:flex;
 flex-wrap:wrap;
@@ -141,7 +147,8 @@ align-items:center
 .sentax img{
 width:100%;
 max-width:400px;
-border:1px solid #222
+border:1px solid #222;
+filter:contrast(1.1) brightness(0.9);
 }
 
 .sentax-text{
@@ -149,6 +156,7 @@ flex:1;
 min-width:250px
 }
 
+/* ===== FOOTER ===== */
 .footer{
 text-align:center;
 padding:40px;
@@ -160,6 +168,7 @@ opacity:.6
 
 <body>
 
+<!-- GATE -->
 <div id="gate">
 <h1>ARE YOU NOT A ROBOT?</h1>
 <div>
@@ -169,11 +178,13 @@ opacity:.6
 <div id="denied">Access Denied</div>
 </div>
 
+<!-- VIDEO -->
 <div id="videoGate">
 <iframe src="https://www.youtube.com/embed/DTfyK4o5s4M?autoplay=1&mute=1&controls=0&loop=1&playlist=DTfyK4o5s4M"></iframe>
 <button id="skip" onclick="enter()">SKIP</button>
 </div>
 
+<!-- MAIN -->
 <div id="main">
 
 <div class="hero">
@@ -186,32 +197,35 @@ opacity:.6
 <h2>About</h2>
 <p>
 <span class="highlight">FINIXCREW DEVELOPER</span> is a student-based horror development team focused on immersive psychological experiences using Godot Engine.
-This is a volunteer-driven project created through passion, learning and collaboration.
 </p>
 </section>
 
 <section>
 <h2>SENTAX Crew: Artificial Psychosis</h2>
+
 <div class="sentax">
 <img src="https://raw.githubusercontent.com/FINIXHAWK671/FINIXCrewDeveloper/main/sentax.jpeg">
+
 <div class="sentax-text">
 <p>
-Developed in collaboration with <span class="highlight">international developers</span> across 
-<span class="highlight">Indonesia</span>, 
-<span class="highlight">Malaysia</span>, 
-<span class="highlight">Russia</span>, 
-<span class="highlight">United States</span>, 
-<span class="highlight">Portugal</span>, 
-<span class="highlight">Spain</span> and other regions, this project takes place in a remote mountain facility located in a classified <span class="highlight">[REDACTED]</span> region.
+Developed with international developers across multiple regions, this project takes place in a classified mountain facility.
 </p>
+
 <br>
+
 <p>
-The facility is operated by <span class="highlight">SSRA</span> (Synaptic Simulation Research Authority), conducting experimental procedures on human and animal subjects involving neural manipulation, artificial intelligence integration and behavioral conditioning.
+Operated by <span class="highlight">SSRA</span>, experiments involve AI, neural manipulation and behavioral control.
 </p>
+
 <br>
+
 <p>
-As experiments progress, subjects begin experiencing distorted perception, religious hallucinations and loss of identity, blurring the line between reality, faith and psychological control.
+Reality begins to collapse as perception becomes unstable.
 </p>
+
+<!-- 🔥 FIXED BUTTON POSITION -->
+<a href="sentax.html" class="btn">LEARN MORE</a>
+
 </div>
 </div>
 </section>
@@ -219,10 +233,10 @@ As experiments progress, subjects begin experiencing distorted perception, relig
 <section>
 <h2>Channels</h2>
 <p>
-<span class="highlight">@FINIXCrew_Developer</span><br>
+<span class="highlight">@FINIXCrew_Developer</span><br><br>
+
 <a href="https://youtube.com/@theonly_adjisan" target="_blank">Adjisan YouTube</a><br>
 <a href="https://www.youtube.com/@Brony242" target="_blank">Albert Carey YouTube</a>
-<a href="sentax.html" class="btn">LEARN MORE</a>
 </p>
 </section>
 
@@ -231,7 +245,8 @@ As experiments progress, subjects begin experiencing distorted perception, relig
 <p>
 Inspired by modern horror studios shaping immersive storytelling experiences.
 </p>
-<a href="https://redbarrelsgames.com/" target="_blank">Visit Red Barrels →</a>
+<br>
+<a href="https://redbarrelsgames.com/" target="_blank" class="btn">Visit Red Barrels</a>
 </section>
 
 <div class="footer">
@@ -256,7 +271,9 @@ document.getElementById('main').style.display='block'
 document.body.style.overflow='auto'
 }
 
+/* scroll animation */
 let sections=document.querySelectorAll('section')
+
 window.addEventListener('scroll',()=>{
 sections.forEach(sec=>{
 let top=sec.getBoundingClientRect().top
